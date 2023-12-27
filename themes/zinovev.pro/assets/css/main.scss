@@ -1,0 +1,334 @@
+@import "media_mixin";
+
+@font-face {
+  font-family: "FOglihtenno06";
+  src: url("/wp-content/themes/zinovev.pro/assets/fonts/foglihtenno06.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("/wp-content/themes/zinovev.pro/assets/fonts/Roboto-Medium.ttf")
+    format("truetype");
+  src: url("/wp-content/themes/zinovev.pro/assets/fonts/Roboto-Light.ttf")
+    format("truetype");
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto;
+}
+
+.banner {
+  background-color: #fcf8f9;
+  .container {
+    padding: 50px 10px;
+  }
+  h1 {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: #1e1e1e;
+    font-family: Roboto;
+    @include max_992 {
+      font-size: 20px;
+    }
+  }
+  .title {
+    font-family: FoglihtenNo06;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: #7a3104;
+    @include max_1400 {
+      font-size: 88px;
+    }
+    @include max_1200 {
+      font-size: 74px;
+    }
+    @include max_992 {
+      font-size: 54px;
+    }
+    @include max_768 {
+      font-size: 42px;
+    }
+  }
+  .desc {
+    width: 327px;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: #1e1e1e;
+    font-family: Roboto;
+    @include max_992 {
+      width: 254px;
+      font-size: 20px;
+    }
+    @include max_576 {
+      width: 100%;
+    }
+  }
+  .btn {
+    width: 188px;
+    height: 47px;
+    border: 2px solid #7a3104;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #7a3104;
+    font-family: FoglihtenNo06;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 190%;
+    &:hover {
+      background-color: #7a3104;
+      color: #ffffff;
+    }
+    @include max_576 {
+      width: 100%;
+    }
+  }
+
+  img {
+    border-radius: 20px;
+    @include max_576 {
+      width: 100%;
+    }
+  }
+  .swiper {
+    width: 100%;
+
+    .swiper-slide img {
+      border-radius: 20px;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .swiper-pagination-bullets {
+      bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .swiper-pagination-bullet {
+      width: 42%;
+      height: 4px;
+      opacity: 1;
+      border-radius: 4px;
+      background-color: #ffffff;
+    }
+    .swiper-pagination-bullet-active {
+      width: 42%;
+      height: 6px;
+      border: 1px solid #ffffff;
+      border-radius: 4px;
+      background-color: #7a3104;
+    }
+  }
+}
+
+.about {
+  .container {
+    padding: 50px 10px;
+  }
+  .hint {
+    color: #7a3104;
+    text-align: right;
+    font-family: FoglihtenNo06;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    @include max_992 {
+      font-size: 16px;
+    }
+  }
+
+  .desc {
+    h2 {
+      color: #7a3104;
+      font-family: FoglihtenNo06;
+      font-size: 64px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      text-transform: uppercase;
+      @include max_1400 {
+        font-size: 60px;
+      }
+      @include max_1200 {
+        font-size: 50px;
+      }
+      @include max_992 {
+        font-size: 38px;
+      }
+      @include max_768 {
+        font-size: 28px;
+      }
+    }
+    p {
+      color: #1e1e1e;
+      font-family: Roboto;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      max-width: 804px;
+      @include max_992 {
+        font-size: 18px;
+      }
+      @include max_576 {
+        font-size: 20px;
+      }
+    }
+    span {
+      color: #7a3104;
+      font-family: FoglihtenNo06;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      @include max_992 {
+        font-size: 18px;
+      }
+      @include max_576 {
+        font-size: 20px;
+      }
+    }
+  }
+
+  img {
+    border-radius: 20px;
+    @include max_576 {
+      width: 100%;
+    }
+  }
+}
+
+.rooms {
+  background-color: #fcf8f9;
+  .container {
+    padding: 50px 10px;
+  }
+  .hint {
+    color: #7a3104;
+    text-align: right;
+    font-family: FoglihtenNo06;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    @include max_992 {
+      font-size: 16px;
+    }
+  }
+  .desc {
+    h2 {
+      color: #7a3104;
+      font-family: FoglihtenNo06;
+      font-size: 64px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      text-transform: uppercase;
+      @include max_1400 {
+        font-size: 60px;
+      }
+      @include max_1200 {
+        font-size: 50px;
+      }
+      @include max_992 {
+        font-size: 38px;
+      }
+      @include max_768 {
+        font-size: 28px;
+      }
+    }
+    p {
+      color: #1e1e1e;
+      font-family: Roboto;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      max-width: 804px;
+      @include max_992 {
+        font-size: 18px;
+      }
+      @include max_576 {
+        font-size: 20px;
+      }
+    }
+  }
+  .room {
+    .title {
+      color: #7a3104;
+      font-family: FoglihtenNo06;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+    .options {
+      p {
+        color: #1e1e1e;
+        font-family: Roboto;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+    }
+    .desc {
+      margin-bottom: 100px;
+      p {
+        color: #1e1e1e;
+        font-family: Roboto;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+    }
+    .tariff {
+      p {
+        color: #7a3104;
+        font-family: Roboto;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+    }
+    .btn {
+      width: 188px;
+      height: 47px;
+      border: 2px solid #7a3104;
+      border-radius: 10px;
+      background-color: #ffffff;
+      color: #7a3104;
+      font-family: FoglihtenNo06;
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      line-height: 190%;
+      &:hover {
+        background-color: #7a3104;
+        color: #ffffff;
+      }
+      @include max_576 {
+        width: 100%;
+      }
+    }
+  }
+  .infrastructure {
+  }
+}
