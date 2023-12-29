@@ -12,6 +12,7 @@
   src: url("/wp-content/themes/zinovev.pro/assets/fonts/Roboto-Light.ttf")
     format("truetype");
 }
+
 html,
 body {
   margin: 0;
@@ -101,7 +102,7 @@ body {
       width: 100%;
     }
   }
-  .swiper {
+  .swiper-banner {
     width: 100%;
 
     .swiper-slide img {
@@ -214,81 +215,45 @@ body {
 
 .rooms {
   background-color: #fcf8f9;
+
   .container {
     padding: 50px 10px;
-  }
-  .hint {
-    color: #7a3104;
-    text-align: right;
-    font-family: FoglihtenNo06;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    @include max_992 {
-      font-size: 16px;
-    }
-  }
-  .desc {
-    h2 {
+    .hint {
+      max-width: 604px;
       color: #7a3104;
+      text-align: right;
       font-family: FoglihtenNo06;
-      font-size: 64px;
+      font-size: 18px;
       font-style: normal;
       font-weight: 500;
       line-height: normal;
-      text-transform: uppercase;
-      @include max_1400 {
-        font-size: 60px;
-      }
-      @include max_1200 {
-        font-size: 50px;
-      }
       @include max_992 {
-        font-size: 38px;
-      }
-      @include max_768 {
-        font-size: 28px;
-      }
-    }
-    p {
-      color: #1e1e1e;
-      font-family: Roboto;
-      font-size: 24px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: normal;
-      max-width: 804px;
-      @include max_992 {
-        font-size: 18px;
-      }
-      @include max_576 {
-        font-size: 20px;
-      }
-    }
-  }
-  .room {
-    .title {
-      color: #7a3104;
-      font-family: FoglihtenNo06;
-      font-size: 48px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: normal;
-      text-transform: uppercase;
-    }
-    .options {
-      p {
-        color: #1e1e1e;
-        font-family: Roboto;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
+        font-size: 16px;
       }
     }
     .desc {
-      margin-bottom: 100px;
+      max-width: 670px;
+      h2 {
+        color: #7a3104;
+        font-family: FoglihtenNo06;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: uppercase;
+        @include max_1400 {
+          font-size: 60px;
+        }
+        @include max_1200 {
+          font-size: 50px;
+        }
+        @include max_992 {
+          font-size: 38px;
+        }
+        @include max_768 {
+          font-size: 28px;
+        }
+      }
       p {
         color: #1e1e1e;
         font-family: Roboto;
@@ -296,39 +261,154 @@ body {
         font-style: normal;
         font-weight: 600;
         line-height: normal;
+        max-width: 804px;
+        @include max_992 {
+          font-size: 18px;
+        }
+        @include max_576 {
+          font-size: 20px;
+        }
       }
     }
-    .tariff {
-      p {
+    .content {
+      max-width: 604px;
+      @include max_1400 {
+        max-width: 508px;
+      }
+      @include max_1200 {
+        max-width: 432px;
+      }
+      .title {
         color: #7a3104;
-        font-family: Roboto;
-        font-size: 32px;
+        font-family: FoglihtenNo06;
+        font-size: 48px;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
+        text-transform: uppercase;
+      }
+      .options {
+        p {
+          color: #1e1e1e;
+          font-family: Roboto;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          img {
+            margin-right: 8px;
+          }
+        }
+      }
+      .desc {
+        ul {
+          list-style: none;
+          color: #1e1e1e;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          li {
+            margin-bottom: 10px;
+          }
+        }
+      }
+      .tariff {
+        p {
+          color: #7a3104;
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+      }
+      .btn {
+        width: 188px;
+        height: 47px;
+        border: 2px solid #7a3104;
+        border-radius: 10px;
+        background-color: #ffffff;
+        color: #7a3104;
+        font-family: FoglihtenNo06;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        line-height: 190%;
+        &:hover {
+          background-color: #7a3104;
+          color: #ffffff;
+        }
+        @include max_576 {
+          width: 100%;
+        }
       }
     }
-    .btn {
-      width: 188px;
-      height: 47px;
-      border: 2px solid #7a3104;
-      border-radius: 10px;
-      background-color: #ffffff;
-      color: #7a3104;
-      font-family: FoglihtenNo06;
-      font-size: 18px;
-      font-weight: 500;
-      letter-spacing: 1px;
-      line-height: 190%;
-      &:hover {
-        background-color: #7a3104;
-        color: #ffffff;
+    .preview {
+      max-width: 670px;
+      @include max_1400 {
+        max-width: 558px;
       }
-      @include max_576 {
+      @include max_1200 {
+        max-width: 468px;
+      }
+      .mySwiper2 {
         width: 100%;
+        .swiper-slide {
+          img {
+            border-radius: 20px;
+          }
+        }
+      }
+      .mySwiper {
+        .swiper-slide {
+          width: 120px !important;
+          opacity: 0.5;
+          margin-right: 20px;
+          &:nth-child(4) {
+            margin-right: 0;
+          }
+          img {
+            border-radius: 10px;
+          }
+          &.swiper-slide-thumb-active {
+            opacity: 1;
+          }
+          @include max_1400 {
+            width: 100px !important;
+            margin-right: 10px;
+          }
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+          width: 50px;
+          height: 50px;
+          border: 1px solid #7a3104;
+          border-radius: 100px;
+          color: #7a3104;
+          &::after {
+            position: absolute;
+            font-size: 24px;
+            font-weight: 600;
+          }
+          &:hover {
+            background-color: #7a3104;
+            color: #ffffff;
+            transition: 0.6s;       
+          }
+        }
+        .swiper-button-next {
+          right: 0;
+          &::after {
+            right: 16px;
+          }
+        }
+        .swiper-button-prev {
+          left: 0;
+          &::after {
+            right: 19px;
+          }
+        }
       }
     }
-  }
-  .infrastructure {
   }
 }
