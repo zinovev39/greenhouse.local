@@ -10,17 +10,18 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
-    <header>
-        <div class="header-container">
+<body <?php body_class(); ?> itemscope itemtype="https://schema.org/WebPage">
+    <header class="header" itemscope itemtype="https://schema.org/Organization">
+        <div class="container d-flex flex-row justify-content-between py-3">
             <div class="header-logo">
                 <div id="logo">
                     <a href="<?php echo home_url(); ?>">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="<?php bloginfo('name'); ?>">
                     </a>
+                    <p class="mb-0">green house</p>
                 </div>
             </div>
-            <div class="header-menu">
+            <div class="header-menu d-none d-md-flex align-items-center mb-0">
                 <nav id="main-menu">
                     <?php
                     wp_nav_menu(array(
@@ -30,31 +31,9 @@
                     ?>
                 </nav>
             </div>
-            <div class="header-contact">
-                <div class="contact-info">
-                    <a href="tel:88007775691">8 (800) 777-56-91</a>
-                </div>
-                <div class="burger-menu">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div>
-                <div class="popup-menu">
-                    <ul>
-                        <li><a href="/o-sisteme">О системе</a></li>
-                        <li><a href="#">Интеграция</a></li>
-                        <li><a href="#">Тарифы</a></li>
-                        <li><a href="#">Контакты</a></li>
-                        <li><a href="#">Вход</a></li>
-                    </ul>
-                    <div class="contact-info">
-                        <a href="tel:88007775691">8 (800) 777-56-91</a>
-                    </div>
-                </div>
-
-                <div id="connect-button-header">
-                    <button>Подключиться</button>
-                </div>
+            <div id="connect-button-header">
+                <div class="btn">Забронировать</div>
             </div>
         </div>
+
     </header>

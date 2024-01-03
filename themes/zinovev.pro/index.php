@@ -710,7 +710,17 @@
         </div>
     </div>
 </section>
-<section class="">
+<section class="contacts">
+    <div class="container text-center">
+        <h2 class="mb-5">Если у вас остались<br> вопросы, свяжитесь с нами.</h2>
+        <h2 class="mb-5">+7 999 123 45 67</h2>
+        <div class="btn">Забронировать</div>
+        <div class="separator d-flex flex-row justify-content-between align-items-center mb-5">
+            <span class="line"></span>
+            <span class="dot"><i class="bi bi-record-circle d-flex align-items-center"></i></span>
+            <span class="line"></span>
+        </div>
+    </div>
 
 </section>
 <?php get_footer(); ?>

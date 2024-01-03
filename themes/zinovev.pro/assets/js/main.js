@@ -156,25 +156,28 @@ var swiperInfrastructure = new Swiper(".swiper-infrastructure", {
 
 // Слайдер - Фотогалерея
 var swiperThumbsPhotoGallery = new Swiper(".photo-thumbs", {
-  direction: 'vertical',
   loop: true,
   freeMode: true,
   breakpoints: {
     1400: {
       slidesPerView: 3,
       spaceBetween: 20,
+      direction: 'vertical',
     },
     1200: {
       slidesPerView: 4,
       spaceBetween: 20,
+      direction: 'vertical',
     },
     992: {
       slidesPerView: 4,
       spaceBetween: 15,
+      direction: 'vertical',
     },
     768: {
       slidesPerView: 3,
       spaceBetween: 15,
+      direction: 'vertical',
     },
     576: {
       slidesPerView: 3,
