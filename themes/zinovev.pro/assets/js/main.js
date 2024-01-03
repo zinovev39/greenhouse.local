@@ -1,4 +1,4 @@
-/* Сладер в баннере */
+// Сладер - Баннер
 var swiperBanner = new Swiper(".swiper-banner", {
   direction: "horizontal",
   loop: true,
@@ -11,8 +11,8 @@ var swiperBanner = new Swiper(".swiper-banner", {
   },
 });
 
-/* Сладер для номеров */
-/* Standart*/
+// Сладер - Номера
+// Стандарт
 var swiperThumbsStandart = new Swiper(".standart-thumbs", {
   loop: true,
   freeMode: true,
@@ -55,7 +55,7 @@ var swiperGalleryStandart = new Swiper(".standart-gallery",{
   },
 });
 
-/* Comfort */
+// Комфорт
 var swiperThumbsComfort = new Swiper(".comfort-thumbs", {
   loop: true,
   freeMode: true,
@@ -98,7 +98,7 @@ var swiperGalleryComfort = new Swiper(".comfort-gallery",{
   },
 });
 
-/* StandartPlus */
+// Стандарт Плюс
 var swiperThumbsStandartPlus = new Swiper(".standartplus-thumbs", {
   loop: true,
   freeMode: true,
@@ -141,6 +141,7 @@ var swiperGalleryStandartPlus = new Swiper(".standartplus-gallery",{
   },
 });
 
+// Слайдер - Инфраструктура
 var swiperInfrastructure = new Swiper(".swiper-infrastructure", {
   direction: "horizontal",
   loop: true,
@@ -150,5 +151,50 @@ var swiperInfrastructure = new Swiper(".swiper-infrastructure", {
   },
   autoplay: {
     delay: 5000,
+  },
+});
+
+// Слайдер - Фотогалерея
+var swiperThumbsPhotoGallery = new Swiper(".photo-thumbs", {
+  direction: 'vertical',
+  loop: true,
+  freeMode: true,
+  breakpoints: {
+    1400: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+    992: {
+      slidesPerView: 4,
+      spaceBetween: 15,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 15,
+    },
+    576: {
+      slidesPerView: 3,
+      spaceBetween: 15,
+      direction: 'horizontal',
+    },
+  },
+});
+var swiperPhotoGallery = new Swiper(".photo-gallery",{
+  loop: true,
+  grabCursor: true,
+  spaceBetween: 20,
+  scrollbar: {
+    el: ".scrollbar-gallery",
+  },
+  navigation: {
+    nextEl: ".button-next-gallery",
+    prevEl: ".button-prev-gallery",
+  },
+  thumbs: {
+    swiper: swiperThumbsPhotoGallery,
   },
 });

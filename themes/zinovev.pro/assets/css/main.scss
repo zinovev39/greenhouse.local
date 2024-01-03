@@ -12,6 +12,7 @@
 
 @import "media_mixin";
 @import "fonts_mixin";
+@import "variables";
 
 html,
 body {
@@ -244,7 +245,7 @@ p {
 .rooms {
     background-color: #fcf8f9;
     .preview {
-        .title {
+        .header {
             max-width: 670px;
             @include max_1400 {
                 max-width: 558px;
@@ -327,7 +328,7 @@ p {
                 }
             }
             img {
-              border-radius: 0;
+                border-radius: 0;
             }
             .options {
                 p {
@@ -601,6 +602,7 @@ p {
             opacity: 1;
         }
     }
+
     .read-more-checker:checked ~ .content {
         max-height: none;
     }
@@ -644,16 +646,19 @@ p {
         height: 70px;
         width: 70px;
         border: 1px solid #7a3104;
-        border-radius: 70px;
+        border-radius: 100px;
         &:hover {
-          rotate: 360deg;
-          transition: 1s;
+            rotate: 360deg;
+            transition: 1s;
+        }
+    }
+    .header {
+        padding-bottom: 80px;
+        @include max_576 {
+            padding-bottom: 30px;
         }
     }
     .title {
-        padding-bottom: 80px;
-    }
-    .item {
         color: #7a3104;
         font-family: FOglihtenno06;
         font-size: 24px;
@@ -661,5 +666,157 @@ p {
         font-weight: 500;
         line-height: normal;
         text-transform: uppercase;
+        @include max_992 {
+            font-size: 20px;
+        }
+        @include max_768 {
+            font-size: 16px;
+        }
+    }
+    .desc {
+        @include max_1200 {
+            font-size: 20px;
+        }
+        @include max_576 {
+            font-size: 18px;
+        }
+    }
+}
+.gallery {
+    background-color: #fcf8f9;
+    .swiper {
+        margin-left: 0 ;
+        height: 731px;
+        @include max_1400 {
+            height: 753px;
+        }
+        @include max_992 {
+            height: 484px;
+        }
+        @include max_768 {
+            height: auto;
+        }
+        &.swiper-gallery {
+            max-width: 968px;
+            @include max_1400 {
+                max-width: 779px;
+            }
+            @include max_1200 {
+                max-width: 605px;
+            }
+            @include max_992 {
+                max-width: 466px;
+            }
+            @include max_768 {
+                max-width: 100%;
+            }
+            .swiper-pagination-bullets {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .swiper-pagination-bullet {
+                width: 20%;
+                height: 4px;
+                opacity: 1;
+                border-radius: 4px;
+                background-color: #ffffff;
+            }
+            .swiper-pagination-bullet-active {
+                width: 20%;
+                height: 6px;
+                border: 1px solid #ffffff;
+                border-radius: 4px;
+                background-color: #7a3104;
+            }
+        }
+        &.swiper-thumbs {
+            cursor: pointer;
+            box-sizing: border-box;
+            @include max_768 {
+                max-width: 520px;
+            }
+            .swiper-slide {
+                opacity: 0.5;
+                img {
+                    display: block;
+                    height: calc((731px - 40px) / 3);
+                    width: 311px;
+                    object-fit: cover;
+                    border-radius: 20px;
+                    @include max_1400 {
+                        height: calc((753px - 60px) / 4);
+                    }
+                    @include max_992 {
+                        width: 215px;
+                        height: calc((484px - 30px) / 3);
+                    }
+                    @include max_768 {
+                        width: 158px;
+                        height: 100px;
+                        border-radius: 10px;
+                    }
+                }
+                &.swiper-slide-thumb-active {
+                    opacity: 1;
+                }
+            }
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+            width: 50px;
+            height: 50px;
+            background-color: #ffffff;
+            opacity: 0.7;
+            border-radius: 100px;
+            color: #7a3104;
+            &::after {
+                position: absolute;
+                font-size: 24px;
+                font-weight: 600;
+            }
+            &:hover {
+                opacity: 1;
+                transition: 0.6s;
+            }
+            @include max_992 {
+                width: 40px;
+                height: 40px;
+            }
+            @include max_768 {
+                width: 50px;
+                height: 50px;
+            }
+        }
+        .swiper-button-next {
+            &::after {
+                right: 16px;
+                @include max_992 {
+                    right: 12px;
+                }
+                @include max_768 {
+                    right: 15px;
+                }
+            }
+        }
+        .swiper-button-prev {
+            &::after {
+                left: 17px;
+                @include max_992 {
+                    left: 12px;
+                }
+                @include max_768 {
+                    left: 16px;
+                }
+            }
+        }
+        .swiper-scrollbar {
+            background-color: #ffffff;
+        }
+        .swiper-scrollbar-drag {
+            height: 5px;
+            border-radius: 4px;
+            background-color: #7a3104;
+        }
     }
 }

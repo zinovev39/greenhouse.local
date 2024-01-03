@@ -2,7 +2,7 @@
 
 <section class="banner">
     <div class="container d-flex flex-column flex-sm-row justify-content-between m-auto">
-        <div class="d-flex flex-column align-items-sm-end">
+        <div class="d-flex flex-column align-items-sm-end mb-3 mb-sm-0">
             <h1 class="mb-3">Гостевой дом</h1>
             <p class="title mb-sm-4 mb-2 text-sm-end">GREEN HOUSE</p>
             <p class="desc mb-3 mb-sm-5">
@@ -70,10 +70,10 @@
     <div class="container align-items-center">
         <div class="preview d-flex flex-column flex-sm-row justify-content-between mb-4 mb-lg-5">
             <p class="hint text-start">Номера</p>
-            <div class="title">
+            <div class="header pb-0">
                 <h2 class="mb-3">Самое время выбрать номер</h2>
                 <p class="desc mb-0">
-                    9 уютных номеров, в которых имеется все необходимое для комфортного пребывания во время отдыха
+                    9 уютных номеров, в которых имеется все необходимое для комфортного пребывания во время отдыха.
                 </p>
             </div>
         </div>
@@ -503,20 +503,20 @@
     <div class="container d-flex flex-column align-items-center">
         <input type="checkbox" class="read-more-checker position-absolute opacity-0" id="read-more-checker" />
         <div class="content overflow-hidden position-relative">
-            <div class="items title d-flex flex-sm-row">
-                <div class="col-sm-6">
-                    <p class="hint text-start">Инфраструктура</p>
+            <div class="header d-flex flex-column flex-sm-row">
+                <div class="col-sm-6 col-12">
+                    <p class="hint text-start">Услуги</p>
                 </div>
-                <div class="col-sm-6">
-                    <h2 class="mb-0">УСлуги и сервисы <br class="d-block d-sm-none">для вас</h2>
+                <div class="col-sm-6 col-12">
+                    <h2 class="mb-0">Услуги и сервисы<br> для вас</h2>
                 </div>
             </div>
-            <div class="items d-flex flex-row mb-3">
-                <div class="col-6">
-                    <p class="item text-start">Зона барбекю</p>
+            <div class="d-flex flex-column flex-sm-row mb-3">
+                <div class="col-sm-6 col-12">
+                    <p class="title text-start">Зона барбекю</p>
                 </div>
-                <div class="col-6 mb-0">
-                    <p>На территории гостевого дома есть все необходимое для самостоятельного приготовления еды на гриле.
+                <div class="col-sm-6 col-12">
+                    <p class="desc">На территории гостевого дома есть все необходимое для самостоятельного приготовления еды на гриле.
                     </p>
                 </div>
             </div>
@@ -525,12 +525,12 @@
                 <span class="dot"><i class="bi bi-record-circle d-flex align-items-center"></i></span>
                 <span class="line"></span>
             </div>
-            <div class="items d-flex flex-row mb-3">
-                <div class="col-6">
-                    <p class="item text-start">Настольные игры</p>
+            <div class="d-flex flex-column flex-sm-row mb-3">
+                <div class="col-sm-6 col-12">
+                    <p class="title text-start">Настольные игры</p>
                 </div>
-                <div class="col-6 mb-0">
-                    <p>Для наших гостей предусмотрены шахматы, домино и другие настольные игры
+                <div class="col-sm-6 col-12">
+                    <p class="desc">Для наших гостей предусмотрены шахматы, домино и другие настольные игры
                         для приятного вечера.</p>
                 </div>
             </div>
@@ -539,12 +539,12 @@
                 <span class="dot"><i class="bi bi-record-circle d-flex align-items-center"></i></span>
                 <span class="line"></span>
             </div>
-            <div class="items d-flex flex-row mb-3">
-                <div class="col-6">
-                    <p class="item text-start">Спортивная прощадка</p>
+            <div class="d-flex flex-column flex-sm-row mb-3">
+                <div class="col-sm-6 col-12">
+                    <p class="title text-start">Спортивная прощадка</p>
                 </div>
-                <div class="col-6 mb-0">
-                    <p>Любителям более активного отдыха не придётся скучать, всегда можно поиграть в баскетбол или бильярд.
+                <div class="col-sm-6 col-12">
+                    <p class="desc">Любителям более активного отдыха не придётся скучать, всегда можно поиграть в баскетбол или бильярд.
                     </p>
                 </div>
             </div>
@@ -553,12 +553,12 @@
                 <span class="dot"><i class="bi bi-record-circle d-flex align-items-center"></i></span>
                 <span class="line"></span>
             </div>
-            <div class="items d-flex flex-row mb-3">
-                <div class="col-6">
-                    <p class="item text-start">Питание в гостевом доме</p>
+            <div class="d-flex flex-column flex-sm-row mb-3">
+                <div class="col-sm-6 col-12">
+                    <p class="title text-start">Питание в гостевом доме</p>
                 </div>
-                <div class="col-6 mb-0">
-                    <p>В гостевом доме расположена кухня - столовая для самостоятельного приготовления пищи.
+                <div class="col-sm-6 col-12">
+                    <p class="desc">В гостевом доме расположена кухня - столовая для самостоятельного приготовления пищи.
                     </p>
                 </div>
             </div>
@@ -567,13 +567,13 @@
                 <span class="dot"><i class="bi bi-record-circle d-flex align-items-center"></i></span>
                 <span class="line"></span>
             </div>
-            <div class="items d-flex flex-row mb-3">
-                <div class="col-6">
-                    <p class="item text-start">Приятные комплименты
+            <div class="d-flex flex-column flex-sm-row mb-3">
+                <div class="col-sm-6 col-12">
+                    <p class="title text-start">Приятные комплименты
                     </p>
                 </div>
-                <div class="col-6 mb-0">
-                    <p>Стараемся порадовать наших гостей бутылочкой вина, шампанского или сладостями и другими сюрпризами.
+                <div class="col-sm-6 col-12">
+                    <p class="desc">Стараемся порадовать наших гостей бутылочкой вина, шампанского или сладостями и другими сюрпризами.
                     </p>
                 </div>
             </div>
@@ -582,13 +582,13 @@
                 <span class="dot"><i class="bi bi-record-circle d-flex align-items-center"></i></span>
                 <span class="line"></span>
             </div>
-            <div class="items d-flex flex-row mb-3">
-                <div class="col-6">
-                    <p class="item text-start">Парковка для постояльцев
+            <div class="d-flex flex-column flex-sm-row mb-3">
+                <div class="col-sm-6 col-12">
+                    <p class="title text-start">Парковка для постояльцев
                     </p>
                 </div>
-                <div class="col-6 mb-0">
-                    <p>На территории гостевого дома имеются охраняемая парковка для всех гостей.
+                <div class="col-sm-6 col-12">
+                    <p class="desc">На территории гостевого дома имеются охраняемая парковка для всех гостей.
                     </p>
                 </div>
             </div>
@@ -602,5 +602,115 @@
         <label for="read-more-checker" class="d-flex read-more-button position-relative"></label>
     </div>
 </section>
+<section class="gallery">
+    <div class="container">
+        <div class="d-flex flex-column flex-sm-row justify-content-between mb-4 mb-lg-5">
+            <p class="hint text-start">фото</p>
+            <div class="col-sm-6 col-12">
+                <h2 class="mb-3">Фотогалерея</h2>
+                <p class="desc mb-0">
+                    Вас ждут незабываемые впечатления которые<br> вдохнут в вас свежие силы для новых свершений
+                </p>
+            </div>
+        </div>
+        <div class="preview d-flex flex-column flex-md-row justify-content-between">
+            <div class="swiper swiper-gallery photo-gallery mb-3 mb-md-0">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <picture>
+                            <source media="(max-width: 576.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-1-576.png" />
+                            <source media="(max-width: 767.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-1-768.png" />
+                            <source media="(max-width: 990.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-1-992.png" />
+                            <source media="(max-width: 1199.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-1-1200.png" />
+                            <source media="(max-width: 1399.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-1-1400.png" />
+                            <img alt="Стандарт" src="/wp-content/themes/zinovev.pro/assets/img/gallery-1.png" />
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source media="(max-width: 576.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-2-576.png" />
+                            <source media="(max-width: 767.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-2-768.png" />
+                            <source media="(max-width: 990.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-2-992.png" />
+                            <source media="(max-width: 1199.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-2-1200.png" />
+                            <source media="(max-width: 1399.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-2-1400.png" />
+                            <img alt="Стандарт" src="/wp-content/themes/zinovev.pro/assets/img/gallery-2.png" />
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source media="(max-width: 576.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-3-576.png" />
+                            <source media="(max-width: 767.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-3-768.png" />
+                            <source media="(max-width: 990.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-3-992.png" />
+                            <source media="(max-width: 1199.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-3-1200.png" />
+                            <source media="(max-width: 1399.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-3-1400.png" />
+                            <img alt="Стандарт" src="/wp-content/themes/zinovev.pro/assets/img/gallery-3.png" />
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source media="(max-width: 576.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-4-576.png" />
+                            <source media="(max-width: 767.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-4-768.png" />
+                            <source media="(max-width: 990.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-4-992.png" />
+                            <source media="(max-width: 1199.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-4-1200.png" />
+                            <source media="(max-width: 1399.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-4-1400.png" />
+                            <img alt="Стандарт" src="/wp-content/themes/zinovev.pro/assets/img/gallery-4.png" />
+                        </picture>
+                    </div>
+                </div>
+                <div class="swiper-button-next button-next-gallery d-none d-sm-flex"></div>
+                <div class="swiper-button-prev button-prev-gallery d-none d-sm-flex"></div>
+            </div>
+            <div class="position-relative">
+                <div class="swiper swiper-thumbs photo-thumbs d-none d-sm-flex">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <picture class="image">
+                                <source media="(max-width: 576.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-1-576.png" />
+                                <source media="(max-width: 767.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-1-768.png" />
+                                <source media="(max-width: 990.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-1-992.png" />
+                                <source media="(max-width: 1199.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-1-1200.png" />
+                                <source media="(max-width: 1399.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-1-1400.png" />
+                                <img alt="Стандарт" src="/wp-content/themes/zinovev.pro/assets/img/gallery-1.png" />
+                            </picture>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture>
+                                <source media="(max-width: 576.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-2-576.png" />
+                                <source media="(max-width: 767.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-2-768.png" />
+                                <source media="(max-width: 990.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-2-992.png" />
+                                <source media="(max-width: 1199.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-2-1200.png" />
+                                <source media="(max-width: 1399.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-2-1400.png" />
+                                <img alt="Стандарт" src="/wp-content/themes/zinovev.pro/assets/img/gallery-2.png" />
+                            </picture>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture>
+                                <source media="(max-width: 576.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-3-576.png" />
+                                <source media="(max-width: 767.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-3-768.png" />
+                                <source media="(max-width: 990.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-3-992.png" />
+                                <source media="(max-width: 1199.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-3-1200.png" />
+                                <source media="(max-width: 1399.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-3-1400.png" />
+                                <img alt="Стандарт" src="/wp-content/themes/zinovev.pro/assets/img/gallery-3.png" />
+                            </picture>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture>
+                                <source media="(max-width: 576.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-4-576.png" />
+                                <source media="(max-width: 767.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-4-768.png" />
+                                <source media="(max-width: 990.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-4-992.png" />
+                                <source media="(max-width: 1199.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-4-1200.png" />
+                                <source media="(max-width: 1399.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/gallery-4-1400.png" />
+                                <img alt="Стандарт" src="/wp-content/themes/zinovev.pro/assets/img/gallery-4.png" />
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-scrollbar scrollbar-gallery d-block d-sm-none"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="">
 
+</section>
 <?php get_footer(); ?>
