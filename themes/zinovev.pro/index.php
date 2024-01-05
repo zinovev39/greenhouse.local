@@ -4,18 +4,17 @@
     <div class="container d-flex flex-column flex-sm-row justify-content-between m-auto">
         <div class="d-flex flex-column align-items-sm-end mb-3 mb-sm-0">
             <h1 class="mb-3">Гостевой дом</h1>
-            <p class="title mb-sm-4 mb-2 text-sm-end">GREEN HOUSE</p>
+            <p class="hotel-name mb-sm-4 mb-2 text-sm-end">GREEN HOUSE</p>
             <p class="desc mb-3 mb-sm-5">
                 Гостевой дом со всеми удобствами для семейного отдыха в тихом месте
-                г.Зеленоградска
+                г. Зеленоградска
             </p>
             <picture class="mb-3 mb-sm-0 d-none d-sm-block">
-                <source media="(max-width: 576.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/banner-left-576.png" />
                 <source media="(max-width: 767.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/banner-left-768.png" />
                 <source media="(max-width: 990.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/banner-left-992.png" />
                 <source media="(max-width: 1199.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/banner-left-1200.png" />
                 <source media="(max-width: 1399.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/banner-left-1400.png" />
-                <img alt="" src="/wp-content/themes/zinovev.pro/assets/img/banner-left.png" />
+                <img class="image" alt="Green Hosuse - Гостевой дом" src="/wp-content/themes/zinovev.pro/assets/img/banner-left.png" />
             </picture>
             <div class="position-relative d-block d-sm-none mb-4">
                 <div class="swiper swiper-banner">
@@ -33,25 +32,24 @@
         </div>
         <div class="d-flex flex-column justify-content-between">
             <picture class="d-none d-sm-block">
-                <source media="(max-width: 576.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/banner-right-576.png" />
                 <source media="(max-width: 767.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/banner-right-768.png" />
                 <source media="(max-width: 990.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/banner-right-992.png" />
                 <source media="(max-width: 1199.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/banner-right-1200.png" />
                 <source media="(max-width: 1399.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/banner-right-1400.png" />
-                <img alt="" src="/wp-content/themes/zinovev.pro/assets/img/banner-right.png" />
+                <img class="image" alt="Green Hosuse - Гостевой дом" src="/wp-content/themes/zinovev.pro/assets/img/banner-right.png" />
             </picture>
             <div class="btn">Забронировать</div>
         </div>
     </div>
 </section>
-<section class="about">
+<section class="about" id="about">
     <div class="container">
         <div class="row mb-3 mb-lg-5">
             <p class="hint text-start col-sm-3">О нас</p>
-            <div class="desc col-sm-9">
+            <div class="col-sm-9">
                 <h2 class="mb-3">Прекрасное место для отдыха от суеты и шума</h2>
-                <p class="mb-0">
-                    <span>Green House</span> - Идеальное место для отдыха и работы - чистый воздух, бесплатный WIFI и
+                <p class="desc mb-0">
+                    <span>Green House</span> - Идеальное место для отдыха и работы -<br class="d-none d-md-block"> чистый воздух, бесплатный WIFI и
                     комфортные номера
                 </p>
             </div>
@@ -62,28 +60,28 @@
             <source media="(max-width: 990.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/about-992.png" />
             <source media="(max-width: 1199.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/about-1200.png" />
             <source media="(max-width: 1399.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/about-1400.png" />
-            <img alt="О нас" src="/wp-content/themes/zinovev.pro/assets/img/about.png" />
+            <img class="image" alt="Прекрасное место для отдыха от суеты и шума" src="/wp-content/themes/zinovev.pro/assets/img/about.png" />
         </picture>
     </div>
 </section>
-<section class="rooms">
+<section class="rooms" id="rooms">
     <div class="container align-items-center">
-        <div class="preview d-flex flex-column flex-sm-row justify-content-between mb-4 mb-lg-5">
-            <p class="hint text-start">Номера</p>
-            <div class="header pb-0">
-                <h2 class="mb-3">Самое время выбрать номер</h2>
+        <div class="d-flex flex-column flex-sm-row mb-4 mb-lg-5">
+            <p class="hint text-start col-12 col-sm-6">Номера</p>
+            <div class="pb-0 col-12 col-sm-6">
+                <h2 class="mb-3">Самое время<br class="d-none d-sm-block"> выбрать номер</h2>
                 <p class="desc mb-0">
                     9 уютных номеров, в которых имеется все необходимое для комфортного пребывания во время отдыха.
                 </p>
             </div>
         </div>
         <div class="room d-flex flex-md-row flex-column justify-content-between mb-5">
-            <div class="content justify-content-between d-flex flex-column">
+            <div class="content justify-content-between d-flex flex-column pe-0 pe-md-4 pe-lg-5">
                 <p class="title text-start mb-2 mb-lg-3 mb-xl-5">Стандарт</p>
                 <div class="options d-flex flex-wrap gap-2 gap-sm-3 gap-md-2 gap-lg-3 mb-3">
-                    <p class="mb-0"><img src="/wp-content/themes/zinovev.pro/assets/img/rooms-people.svg" alt="до 4 человек">до 4 человек</p>
-                    <p class="mb-0"><img src="/wp-content/themes/zinovev.pro/assets/img/rooms-arrow.svg" alt="16 кв.м">16 кв.м</p>
-                    <p class="mb-0"><img src="/wp-content/themes/zinovev.pro/assets/img/rooms-bed.svg" alt="Диван + кровать">Диван + кровать</p>
+                    <p class="mb-0"><img src="/wp-content/themes/zinovev.pro/assets/img/rooms-people.svg" alt="Стандарт">до 4 человек</p>
+                    <p class="mb-0"><img src="/wp-content/themes/zinovev.pro/assets/img/rooms-arrow.svg" alt="Стандарт">16 кв.м</p>
+                    <p class="mb-0"><img src="/wp-content/themes/zinovev.pro/assets/img/rooms-bed.svg" alt="Стандарт">Диван + кровать</p>
                 </div>
                 <p class="desc mb-3 mb-md-2 mb-lg-3 mb-xl-5">
                     Номер состоит из одной комнаты с большой террасой.
@@ -94,7 +92,7 @@
                 <p class="tariff mb-3 mb-md-2 mb-lg-3 mb-xl-5">Стоимость за ночь: от 5 000₽</p>
                 <div class="btn d-none d-md-block">Забронировать</div>
             </div>
-            <div class="preview mb-4 mb-md-0">
+            <div class="preview">
                 <div class="swiper swiper-gallery standart-gallery mb-3">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -139,7 +137,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="position-relative">
+                <div class="position-relative mb-0 mb-sm-4 mb-md-0">
                     <div class="swiper swiper-thumbs standart-thumbs d-none d-sm-flex">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -188,9 +186,9 @@
                     <div class="swiper-button-prev button-prev-standart d-none d-sm-flex"></div>
                     <div class="swiper-scrollbar scrollbar-standart d-block d-sm-none"></div>
                 </div>
-            </div>
-            <div class="nav d-flex justify-content-center">
-                <div class="btn d-block d-md-none">Забронировать</div>
+                <div class="nav d-flex justify-content-center pt-4">
+                    <div class="btn d-block d-md-none">Забронировать</div>
+                </div>
             </div>
         </div>
         <div class="separator d-flex flex-row justify-content-between align-items-center mb-5">
@@ -199,7 +197,7 @@
             <span class="line"></span>
         </div>
         <div class="room d-flex flex-md-row flex-column justify-content-between mb-5">
-            <div class="content justify-content-between d-flex flex-column">
+            <div class="content justify-content-between d-flex flex-column pe-0 pe-md-4 pe-lg-5">
                 <p class="title text-start mb-2 mb-lg-3 mb-xl-5">Комфорт</p>
                 <div class="options d-flex flex-wrap gap-2 gap-sm-3 gap-md-2 gap-lg-3 mb-3">
                     <p class="mb-0"><img src="/wp-content/themes/zinovev.pro/assets/img/rooms-people.svg" alt="до 4 человек">до 4 человек</p>
@@ -216,7 +214,7 @@
                 <p class="tariff mb-3 mb-md-2 mb-lg-3 mb-xl-5">Стоимость за ночь: от 10 000₽</p>
                 <div class="btn d-none d-md-block">Забронировать</div>
             </div>
-            <div class="preview mb-4 mb-md-0">
+            <div class="preview">
                 <div class="swiper swiper-gallery comfort-gallery mb-3">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -262,7 +260,7 @@
                     </div>
 
                 </div>
-                <div class="position-relative">
+                <div class="position-relative mb-0 mb-sm-4 mb-md-0">
                     <div class="swiper swiper-thumbs comfort-thumbs d-none d-sm-flex">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -310,11 +308,10 @@
                     <div class="swiper-button-next button-next-comfort d-none d-sm-flex"></div>
                     <div class="swiper-button-prev button-prev-comfort d-none d-sm-flex"></div>
                     <div class="swiper-scrollbar scrollbar-comfort d-block d-sm-none"></div>
+                </div>             
+                <div class="nav d-flex justify-content-center pt-4">
+                    <div class="btn d-block d-md-none">Забронировать</div>
                 </div>
-                <div class="swiper-scrollbar"></div>
-            </div>
-            <div class="nav d-flex justify-content-center">
-                <div class="btn d-block d-md-none">Забронировать</div>
             </div>
         </div>
         <div class="separator d-flex flex-row justify-content-between align-items-center mb-5">
@@ -323,7 +320,7 @@
             <span class="line"></span>
         </div>
         <div class="room d-flex flex-md-row flex-column justify-content-between mb-5">
-            <div class="content justify-content-between d-flex flex-column">
+            <div class="content justify-content-between d-flex flex-column pe-0 pe-md-4 pe-lg-5">
                 <p class="title text-start mb-2 mb-lg-3 mb-xl-5">улучшенный Стандарт</p>
                 <div class="options d-flex flex-wrap gap-2 gap-sm-3 gap-md-2 gap-lg-3 mb-3">
                     <p class="mb-0"><img src="/wp-content/themes/zinovev.pro/assets/img/rooms-people.svg" alt="до 4 человек">до 4 человек</p>
@@ -339,7 +336,7 @@
                 <p class="tariff mb-3 mb-md-2 mb-lg-3 mb-xl-5">Стоимость за ночь: от 7 000₽</p>
                 <div class="btn d-none d-md-block">Забронировать</div>
             </div>
-            <div class="preview mb-4 mb-md-0">
+            <div class="preview">
                 <div class="swiper swiper-gallery standartplus-gallery mb-3">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -384,7 +381,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="position-relative">
+                <div class="position-relative mb-0 mb-sm-4 mb-md-0">
                     <div class="swiper swiper-thumbs standartplus-thumbs d-none d-sm-flex">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -433,11 +430,11 @@
                     <div class="swiper-button-prev button-prev-standartplus d-none d-sm-flex"></div>
                     <div class="swiper-scrollbar scrollbar-standartplus d-block d-sm-none"></div>
                 </div>
-                <div class="swiper-scrollbar"></div>
+                <div class="nav d-flex justify-content-center pt-4">
+                    <div class="btn d-block d-md-none">Забронировать</div>
+                </div>
             </div>
-            <div class="nav d-flex justify-content-center">
-                <div class="btn d-block d-md-none">Забронировать</div>
-            </div>
+
         </div>
         <div class="separator d-flex flex-row justify-content-between align-items-center mb-0">
             <span class="line"></span>
@@ -446,18 +443,18 @@
         </div>
     </div>
 </section>
-<section class="infrastructure">
+<section class="infrastructure" id="infrastructure">
     <div class="container d-flex flex-column justify-content-between m-auto">
         <div>
-            <div class="preview d-flex flex-column flex-sm-row justify-content-between mb-3">
+            <div class="d-flex flex-column flex-sm-row justify-content-between mb-3 mb-sm-5">
                 <p class="hint text-start">Инфраструктура</p>
                 <div class="title">
-                    <h2 class="mb-0">Инфраструктура<br class="d-block d-sm-none"> нашего отеля</h2>
+                    <h2 class="mb-0">Инфраструктура<br class="d-none d-sm-block"> нашего отеля</h2>
                 </div>
             </div>
-            <div class="d-flex justify-content-end mb-3 mb-md-4 mb-xl-5">
+            <div class="d-flex justify-content-end mb-4 mb-xl-5">
                 <p class="desc mb-0">
-                    Гостевой дом находится всего в 30 мин езды от Калининграда и 600 м от моря, идеальное место для романтического и семейного отдыха. Мы позаботились обо всем, чтобы вы чувствовали себя комфортно и были окружены европейским сервисом.
+                    Гостевой дом находится всего в 30 мин езды от Калининграда и в 600 метрах от моря, идеальное место для романтического и семейного отдыха. Мы позаботились обо всем, чтобы вы чувствовали себя комфортно и были окружены европейским сервисом.
                 </p>
             </div>
         </div>
@@ -468,17 +465,17 @@
                     <source media="(max-width: 990.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/infrastructure-left-992.png" />
                     <source media="(max-width: 1199.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/infrastructure-left-1200.png" />
                     <source media="(max-width: 1399.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/infrastructure-left-1400.png" />
-                    <img alt="" src="/wp-content/themes/zinovev.pro/assets/img/infrastructure-left.png" />
+                    <img class="image" alt="Инфраструктура" src="/wp-content/themes/zinovev.pro/assets/img/infrastructure-left.png" />
                 </picture>
             </div>
             <div class="position-relative d-block d-sm-none mb-4">
                 <div class="swiper swiper-infrastructure">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img alt="Green Hosuse - Гостевой дом" src="/wp-content/themes/zinovev.pro/assets/img/infrastructure-left-576.png" />
+                            <img alt="Инфраструктура" src="/wp-content/themes/zinovev.pro/assets/img/infrastructure-left-576.png" />
                         </div>
                         <div class="swiper-slide">
-                            <img alt="Green Hosuse - Гостевой дом" src="/wp-content/themes/zinovev.pro/assets/img/infrastructure-right-576.png" />
+                            <img alt="Инфраструктура" src="/wp-content/themes/zinovev.pro/assets/img/infrastructure-right-576.png" />
                         </div>
                     </div>
                 </div>
@@ -490,20 +487,20 @@
                     <source media="(max-width: 990.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/infrastructure-right-992.png" />
                     <source media="(max-width: 1199.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/infrastructure-right-1200.png" />
                     <source media="(max-width: 1399.98px)" srcset="/wp-content/themes/zinovev.pro/assets/img/infrastructure-right-1400.png" />
-                    <img alt="" src="/wp-content/themes/zinovev.pro/assets/img/infrastructure-right.png" />
+                    <img class="image" alt="Инфраструктура" src="/wp-content/themes/zinovev.pro/assets/img/infrastructure-right.png" />
                 </picture>
-                <p class="mb-0">
+                <p class="mb-0 pt-3 pt-sm-0">
                     У нас созданы все условия для комфортного отдыха и работы во время посещения гостевого дома,в каждом номере и на всей территории гостевого дома проведён wi-fi и цифровое телевидение. Многие номера имеют террасы,где вы также можете спокойно отдыхать или работать
                 </p>
             </div>
         </div>
     </div>
 </section>
-<section class="services">
+<section class="services" id="services">
     <div class="container d-flex flex-column align-items-center">
         <input type="checkbox" class="read-more-checker position-absolute opacity-0" id="read-more-checker" />
         <div class="content overflow-hidden position-relative">
-            <div class="header d-flex flex-column flex-sm-row">
+            <div class="d-flex flex-column flex-sm-row mb-5">
                 <div class="col-sm-6 col-12">
                     <p class="hint text-start">Услуги</p>
                 </div>
@@ -602,18 +599,18 @@
         <label for="read-more-checker" class="d-flex read-more-button position-relative"></label>
     </div>
 </section>
-<section class="gallery">
+<section class="gallery" id="gallery">
     <div class="container">
         <div class="d-flex flex-column flex-sm-row justify-content-between mb-4 mb-lg-5">
             <p class="hint text-start">фото</p>
             <div class="col-sm-6 col-12">
                 <h2 class="mb-3">Фотогалерея</h2>
                 <p class="desc mb-0">
-                    Вас ждут незабываемые впечатления которые<br> вдохнут в вас свежие силы для новых свершений
+                    Вас ждут незабываемые впечатления которые<br class="d-none d-xl-block"> вдохнут в вас свежие силы для новых свершений
                 </p>
             </div>
         </div>
-        <div class="preview d-flex flex-column flex-md-row justify-content-between">
+        <div class="d-flex flex-column flex-md-row justify-content-between">
             <div class="swiper swiper-gallery photo-gallery mb-3 mb-md-0">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -710,12 +707,12 @@
         </div>
     </div>
 </section>
-<section class="contacts">
+<section class="contacts" id="contacts">
     <div class="container text-center">
         <h2 class="mb-5">Если у вас остались<br> вопросы, свяжитесь с нами.</h2>
         <h2 class="mb-5">+7 999 123 45 67</h2>
         <div class="btn">Забронировать</div>
-        <div class="separator d-flex flex-row justify-content-between align-items-center mb-5">
+        <div class="separator d-flex flex-row justify-content-between align-items-center">
             <span class="line"></span>
             <span class="dot"><i class="bi bi-record-circle d-flex align-items-center"></i></span>
             <span class="line"></span>
@@ -723,4 +720,5 @@
     </div>
 
 </section>
+
 <?php get_footer(); ?>

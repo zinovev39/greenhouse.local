@@ -1,5 +1,5 @@
 /**********
-* Часто повторяющиеся элементы
+* Часто повторяющиеся элементы *
 
 - Кнопки
 - Контейнер
@@ -7,6 +7,7 @@
 - Заголовки 
 - Картинки
 - Параграф
+- Header
 
 **********/
 
@@ -22,9 +23,11 @@ body {
 
 body {
     font-family: Roboto;
+    overflow: hidden;
+    overflow-y: auto;
 }
 
-/* Заголовки */
+// Заголовки
 h1 {
     font-size: 24px;
     font-style: normal;
@@ -58,7 +61,7 @@ h2 {
     }
 }
 
-/* Кнопки */
+// Кнопки
 .btn {
     width: 200px;
     height: 48px;
@@ -74,18 +77,19 @@ h2 {
     &:hover {
         background-color: #7a3104;
         color: #ffffff;
+        box-shadow: 1px 1px 20px 0 rgba(42, 42, 42, 0.15);
     }
     @include max_576 {
         width: 100%;
     }
 }
 
-/* Контейнер */
+// Контейнер
 .container {
     padding: 50px 10px;
 }
 
-/* Подсказка блока */
+// Подсказка блока
 .hint {
     color: #7a3104;
     text-align: right;
@@ -99,15 +103,16 @@ h2 {
     }
 }
 
-/* Картинки */
-img {
-    border-radius: 20px;
+// Картинки
+.image {
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px 0 rgba(42, 42, 42, 0.15);
     @include max_576 {
         width: 100%;
     }
 }
 
-/* Парагаф */
+// Парагаф
 p {
     color: #1e1e1e;
     font-family: Roboto;
@@ -122,20 +127,30 @@ p {
     }
 }
 
-/* Розделитель */
+// Розделитель
 .separator {
-    max-width: 100%;
     .line {
         width: 48.5%;
         background-color: #7a3104;
         height: 1px;
+        @include max_992 {
+            max-width: 48%;
+        }
+        @include max_576 {
+            max-width: 46.5%;
+        }
+        @include max_768 {
+            max-width: 47.5%;
+        }
+        @include max_576 {
+            max-width: 46.5%;
+        }
     }
     .bi {
         color: #7a3104;
         font-size: 14px;
     }
 }
-
 
 // Header
 .header {
@@ -150,6 +165,7 @@ p {
                 border-radius: 0;
                 width: 90px;
                 margin-bottom: 2px;
+                box-shadow: none;
             }
             p {
                 color: #7a3104;
@@ -163,6 +179,11 @@ p {
             }
         }
         .header-menu {
+            nav {
+                @include max_768 {
+                    width: 100%;
+                }
+            }
             ul {
                 display: flex;
                 flex-direction: row;
@@ -175,10 +196,15 @@ p {
                     @include max_992 {
                         margin-right: 15px;
                     }
+                    @include max_768 {
+                        margin-right: 0;
+                        margin-bottom: 20px;
+                    }
                     &:last-child {
                         margin-right: 0;
                     }
                     a {
+                        position: relative;
                         color: #1e1e1e;
                         font-family: Roboto;
                         font-size: 20px;
@@ -186,12 +212,100 @@ p {
                         font-weight: 600;
                         line-height: normal;
                         text-decoration: none;
+                        &::before {
+                            position: absolute;
+                            bottom: -7px;
+                            left: 50%;
+                            width: 0;
+                            height: 2px;
+                            content: "";
+                            transition: all 0.4s ease-in-out;
+                            background-color: #7a3104;
+                        }
                         &:hover {
                             color: #7a3104;
                             font-weight: 600;
+                            &::before {
+                                right: 0;
+                                left: 0;
+                                width: 96%;
+                                margin: auto;
+                            }
                         }
                         @include max_992 {
                             font-size: 18px;
+                        }
+                        @include max_768 {
+                            display: block;
+                            &::before {
+                                opacity: 0;
+                            }
+                        }
+                    }
+                }
+                @include max_768 {
+                    display: block;
+                }
+            }
+            @include max_768 {
+                position: absolute;
+                align-items: start;
+                right: -350px;
+                top: 0;
+                width: 350px;
+                height: 100vh;
+                background-color: #ffffff;
+                transition: transform 0.5s;
+                padding-top: 75px;
+                padding-left: 30px;
+            }
+        }
+        .separator {
+            .line {
+                width: 135px;
+            }
+        }
+        .header-burger {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            background-color: #ffffff;
+            border: none;
+            outline: none;
+            span {
+                display: block;
+                position: absolute;
+                width: 30px;
+                height: 3px;
+                background-color: #7a3104;
+                transition: background-color 0.5s, opacity 0.25s, transform 0.5s;
+                will-change: transform;
+                &:nth-child(1) {
+                    transform: translateY(-8px);
+                }
+                &:nth-child(2) {
+                }
+                &:nth-child(3) {
+                    transform: translateY(8px);
+                }
+            }
+        }
+        &.open {
+            @include max_768 {
+                .header-menu {
+                    padding: 75px 30px 0 30px;
+                    transform: translateX(-100%);
+                }
+                .header-burger {
+                    span {
+                        &:nth-child(1) {
+                            transform: translateY(0) rotate(45deg);
+                        }
+                        &:nth-child(2) {
+                            opacity: 0;
+                        }
+                        &:nth-child(3) {
+                            transform: translateY(0) rotate(-45deg);
                         }
                     }
                 }
@@ -199,9 +313,11 @@ p {
         }
     }
 }
+
+//Body
 .banner {
     background-color: #fcf8f9;
-    .title {
+    .hotel-name {
         font-family: FOglihtenno06;
         font-size: 100px;
         font-style: normal;
@@ -222,23 +338,22 @@ p {
         }
     }
     .desc {
-        width: 327px;
+        max-width: 327px;
         @include max_992 {
-            width: 254px;
+            max-width: 254px;
             font-size: 20px;
         }
         @include max_576 {
-            width: 100%;
+            max-width: 100%;
         }
     }
     .swiper-banner {
         width: 100%;
-        .swiper-slide img {
-            border-radius: 20px;
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .swiper-slide {
+            img {
+                border-radius: 10px;
+                width: 100%;
+            }
         }
     }
     .swiper-scrollbar {
@@ -252,133 +367,55 @@ p {
     }
 }
 .about {
+    h2 {
+        @include max_1400 {
+            font-size: 60px;
+        }
+        @include max_1200 {
+            font-size: 50px;
+        }
+        @include max_992 {
+            font-size: 38px;
+        }
+        @include max_768 {
+            font-size: 28px;
+        }
+    }
     .desc {
-        h2 {
-            color: #7a3104;
-            font-family: FOglihtenno06;
-            font-size: 64px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-            text-transform: uppercase;
-            @include max_1400 {
-                font-size: 60px;
-            }
-            @include max_1200 {
-                font-size: 50px;
-            }
-            @include max_992 {
-                font-size: 38px;
-            }
-            @include max_768 {
-                font-size: 28px;
-            }
+        @include max_992 {
+            font-size: 18px;
         }
-        p {
-            color: #1e1e1e;
-            font-family: Roboto;
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: normal;
-            max-width: 804px;
-            @include max_992 {
-                font-size: 18px;
-            }
-            @include max_576 {
-                font-size: 20px;
-            }
+        @include max_576 {
+            font-size: 20px;
         }
-        span {
-            color: #7a3104;
-            font-family: FOglihtenno06;
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-            @include max_992 {
-                font-size: 18px;
-            }
-            @include max_576 {
-                font-size: 20px;
-            }
+    }
+    span {
+        color: #7a3104;
+        font-family: FOglihtenno06;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        @include max_992 {
+            font-size: 18px;
+        }
+        @include max_576 {
+            font-size: 20px;
         }
     }
 }
 .rooms {
     background-color: #fcf8f9;
-    .preview {
-        .header {
-            max-width: 670px;
-            @include max_1400 {
-                max-width: 558px;
-            }
-            @include max_1200 {
-                max-width: 468px;
-            }
-            @include max_992 {
-                max-width: 348px;
-            }
-            @include max_768 {
-                max-width: 258px;
-            }
-            @include max_576 {
-                max-width: 360px;
-            }
-            h2 {
-                color: #7a3104;
-                font-family: FOglihtenno06;
-                font-size: 64px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: normal;
-                text-transform: uppercase;
-                @include max_1400 {
-                    font-size: 60px;
-                }
-                @include max_1200 {
-                    font-size: 50px;
-                }
-                @include max_992 {
-                    font-size: 38px;
-                }
-                @include max_768 {
-                    font-size: 32px;
-                }
-            }
-
-            .desc {
-                color: #1e1e1e;
-                font-family: Roboto;
-                font-size: 24px;
-                font-style: normal;
-                font-weight: 600;
-                line-height: normal;
-                max-width: 804px;
-                @include max_992 {
-                    font-size: 18px;
-                }
-                @include max_576 {
-                    font-size: 20px;
-                }
-            }
+    .desc {
+        @include max_992 {
+            font-size: 18px;
+        }
+        @include max_576 {
+            font-size: 20px;
         }
     }
     .room {
         .content {
-            max-width: 604px;
-            @include max_1400 {
-                max-width: 508px;
-            }
-            @include max_1200 {
-                max-width: 428px;
-            }
-            @include max_992 {
-                max-width: 318px;
-            }
-            @include max_768 {
-                max-width: 100%;
-            }
             .title {
                 color: #7a3104;
                 font-family: FOglihtenno06;
@@ -390,16 +427,8 @@ p {
                     font-size: 32px;
                 }
             }
-            img {
-                border-radius: 0;
-            }
             .options {
                 p {
-                    color: #1e1e1e;
-                    font-size: 24px;
-                    font-style: normal;
-                    font-weight: 600;
-                    line-height: normal;
                     img {
                         margin-right: 8px;
                         @include max_1200 {
@@ -415,11 +444,6 @@ p {
                 }
             }
             .desc {
-                color: #1e1e1e;
-                font-size: 22px;
-                font-style: normal;
-                font-weight: 600;
-                line-height: normal;
                 @include max_1200 {
                     font-size: 20px;
                 }
@@ -463,9 +487,12 @@ p {
             }
             .swiper {
                 &.swiper-gallery {
-                    height: auto;
-                    width: 100%;
-
+                    .swiper-slide {
+                        img {
+                            border-radius: 10px;
+                            width: 100%;
+                        }
+                    }
                     .swiper-pagination-bullets {
                         display: flex;
                         align-items: center;
@@ -582,24 +609,22 @@ p {
 }
 .infrastructure {
     background-color: #fcf8f9;
-    .preview {
-        .title {
-            max-width: 670px;
-            @include max_1400 {
-                max-width: 558px;
-            }
-            @include max_1200 {
-                max-width: 468px;
-            }
-            @include max_992 {
-                max-width: 348px;
-            }
-            @include max_768 {
-                max-width: 258px;
-            }
-            @include max_576 {
-                max-width: 100%;
-            }
+    .title {
+        max-width: 670px;
+        @include max_1400 {
+            max-width: 558px;
+        }
+        @include max_1200 {
+            max-width: 468px;
+        }
+        @include max_992 {
+            max-width: 348px;
+        }
+        @include max_768 {
+            max-width: 258px;
+        }
+        @include max_576 {
+            max-width: 100%;
         }
     }
     .desc {
@@ -634,11 +659,9 @@ p {
     .swiper-infrastructure {
         width: 100%;
         .swiper-slide img {
-            border-radius: 20px;
-            display: block;
+            border-radius: 10px;
             width: 100%;
             height: 100%;
-            object-fit: cover;
         }
     }
     .swiper-scrollbar {
@@ -665,7 +688,6 @@ p {
             opacity: 1;
         }
     }
-
     .read-more-checker:checked ~ .content {
         max-height: none;
     }
@@ -715,10 +737,12 @@ p {
             transition: 1s;
         }
     }
-    .header {
-        padding-bottom: 80px;
+    h2 {
+        @include max_768 {
+            font-size: 26px;
+        }
         @include max_576 {
-            padding-bottom: 30px;
+            font-size: 32px;
         }
     }
     .title {
@@ -747,6 +771,15 @@ p {
 }
 .gallery {
     background-color: #fcf8f9;
+    .desc {
+        max-width: 996px;
+        @include max_992 {
+            font-size: 20px;
+        }
+        @include max_768 {
+            font-size: 18px;
+        }
+    }
     .swiper {
         margin-left: 0;
         height: 731px;
@@ -792,6 +825,10 @@ p {
                 border-radius: 4px;
                 background-color: #7a3104;
             }
+            img {
+                border-radius: 10px;
+                width: 100%;
+            }
         }
         &.swiper-thumbs {
             cursor: pointer;
@@ -806,7 +843,7 @@ p {
                     height: calc((731px - 40px) / 3);
                     width: 311px;
                     object-fit: cover;
-                    border-radius: 20px;
+                    border-radius: 10px;
                     @include max_1400 {
                         height: calc((753px - 60px) / 4);
                     }
@@ -817,7 +854,6 @@ p {
                     @include max_768 {
                         width: 158px;
                         height: 100px;
-                        border-radius: 10px;
                     }
                 }
                 &.swiper-slide-thumb-active {
@@ -873,19 +909,130 @@ p {
                 }
             }
         }
-        .swiper-scrollbar {
-            background-color: #ffffff;
-        }
-        .swiper-scrollbar-drag {
-            height: 5px;
-            border-radius: 4px;
-            background-color: #7a3104;
-        }
+    }
+    .swiper-scrollbar {
+        background-color: #ffffff;
+    }
+    .swiper-scrollbar-drag {
+        height: 5px;
+        border-radius: 4px;
+        background-color: #7a3104;
     }
 }
 .contacts {
     background-color: #fcf8f9;
     .btn {
         margin-bottom: 100px;
+    }
+}
+
+//Footer
+.footer {
+    background-color: #fcf8f9;
+    .container {
+        padding: 0;
+        .title {
+            color: var(--color-, #7a3104);
+            font-family: FoglihtenNo06;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+        .about {
+            width: 312px;
+            .footer-logo {
+                img {
+                    border-radius: 0;
+                    width: 90px;
+                    margin-bottom: 2px;
+                    box-shadow: none;
+                }
+                p {
+                    color: #7a3104;
+                    font-family: FoglihtenNo06;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    letter-spacing: 0.25px;
+                    text-transform: uppercase;
+                }
+            }
+            .desc {
+                font-size: 18px;
+            }
+            .copyright {
+                font-size: 18px;
+                span {
+                    font-size: 18px;
+                }
+                img {
+                    width: 18px;
+                }
+            }
+        }
+        .menu {
+            ul {
+                width: 80px;
+                display: flex;
+                flex-direction: column;
+                list-style-type: none;
+                justify-content: center;
+                padding: 0;
+                margin: 0;
+                li {
+                    margin-bottom: 15px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    a {
+                        color: #1e1e1e;
+                        font-family: Roboto;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                        text-decoration: none;
+
+                        @include max_992 {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+        .contacts {
+            width: 342px;
+            .name {
+                color: #b2b2b2;
+                font-family: Roboto;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                margin-bottom: 5px;
+            }
+            .phone {
+                font-family: Roboto;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                margin-bottom: 15px;
+            }
+            .adress {
+                font-family: Roboto;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                margin-bottom: 5px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
     }
 }
