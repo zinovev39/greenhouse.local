@@ -1,7 +1,7 @@
 //Меню - Бургер
 document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("burger-menu").addEventListener("click", function () {
-      document.querySelector(".container").classList.toggle("open");
+  document.getElementById("mobile-menu").addEventListener("click", function () {
+      document.querySelector(".container").classList.toggle("active");
   });
 });
 
@@ -9,14 +9,14 @@ document.getElementById("main-menu").addEventListener("click", (event) => {
   event._isClickWithInMenu = true;
 });
 
-document.getElementById("burger-menu").addEventListener("click", (event) => {
+document.getElementById("mobile-menu").addEventListener("click", (event) => {
   event._isClickWithInMenu = true;
 });
 
 document.body.addEventListener("click", (event) => {
   if (event._isClickWithInMenu) return;
   //Действие при клике
-  document.querySelector(".container").classList.remove("open");
+  document.querySelector(".container").classList.remove("active");
 });
 
 // Сладер - Баннер

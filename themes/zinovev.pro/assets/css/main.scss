@@ -23,8 +23,6 @@ body {
 
 body {
     font-family: Roboto;
-    overflow: hidden;
-    overflow-y: auto;
 }
 
 // Заголовки
@@ -250,6 +248,7 @@ p {
             @include max_768 {
                 position: absolute;
                 align-items: start;
+                overflow-y: auto;
                 right: -350px;
                 top: 0;
                 width: 350px;
@@ -265,7 +264,7 @@ p {
                 width: 135px;
             }
         }
-        .header-burger {
+        .mobile-menu {
             position: relative;
             width: 40px;
             height: 40px;
@@ -276,27 +275,25 @@ p {
                 display: block;
                 position: absolute;
                 width: 30px;
-                height: 3px;
+                height: 2px;
                 background-color: #7a3104;
                 transition: background-color 0.5s, opacity 0.25s, transform 0.5s;
                 will-change: transform;
                 &:nth-child(1) {
                     transform: translateY(-8px);
                 }
-                &:nth-child(2) {
-                }
                 &:nth-child(3) {
                     transform: translateY(8px);
                 }
             }
         }
-        &.open {
+        &.active {
             @include max_768 {
                 .header-menu {
                     padding: 75px 30px 0 30px;
                     transform: translateX(-100%);
                 }
-                .header-burger {
+                .mobile-menu {
                     span {
                         &:nth-child(1) {
                             transform: translateY(0) rotate(45deg);
@@ -930,7 +927,8 @@ p {
 .footer {
     background-color: #fcf8f9;
     .container {
-        padding: 0;
+        padding: 0 10px;
+
         .title {
             color: var(--color-, #7a3104);
             font-family: FoglihtenNo06;
@@ -941,6 +939,13 @@ p {
         }
         .about {
             width: 312px;
+            @include max_1200 {
+                width: 228px;
+            }
+            @include max_768 {
+                width: 100%;
+            }
+
             .footer-logo {
                 img {
                     border-radius: 0;
@@ -961,18 +966,15 @@ p {
             }
             .desc {
                 font-size: 18px;
-            }
-            .copyright {
-                font-size: 18px;
-                span {
-                    font-size: 18px;
-                }
-                img {
-                    width: 18px;
+                @include max_992 {
+                    font-size: 16px;
                 }
             }
         }
         .menu {
+            @include max_576 {
+                width: 90px;
+            }
             ul {
                 width: 80px;
                 display: flex;
@@ -994,7 +996,6 @@ p {
                         font-style: normal;
                         font-weight: 600;
                         line-height: normal;
-                        text-decoration: none;
 
                         @include max_992 {
                             font-size: 18px;
@@ -1005,14 +1006,23 @@ p {
         }
         .contacts {
             width: 342px;
+            @include max_1200 {
+                width: 195px;
+            }
+            @include max_576 {
+                width: 152px;
+            }
             .name {
                 color: #b2b2b2;
                 font-family: Roboto;
                 font-size: 18px;
                 font-style: normal;
-                font-weight: 600;
+                font-weight: 500;
                 line-height: normal;
                 margin-bottom: 5px;
+                @include max_1200 {
+                    font-size: 16px;
+                }
             }
             .phone {
                 font-family: Roboto;
@@ -1021,6 +1031,9 @@ p {
                 font-weight: 600;
                 line-height: normal;
                 margin-bottom: 15px;
+                @include max_1200 {
+                    font-size: 16px;
+                }
             }
             .adress {
                 font-family: Roboto;
@@ -1032,7 +1045,93 @@ p {
                 &:last-child {
                     margin-bottom: 0;
                 }
+                @include max_1200 {
+                    font-size: 16px;
+                }
             }
         }
+
+        .copyright {
+            font-size: 18px;
+            font-weight: 600;
+            @include max_1200 {
+                font-size: 16px;
+            }
+            @include max_576 {
+                width: 18px;
+            }
+            @include max_definite_width(500) {
+                width: 100%;
+                padding-bottom: 15px;
+            }
+            span {
+                font-size: 18px;
+                font-family: FoglihtenNo06;
+                color: #7a3104;
+                @include max_1200 {
+                    font-size: 16px;
+                }
+                @include max_576 {
+                    width: 18px;
+                }
+            }
+            img {
+                width: 17px;
+                padding-bottom: 2px;
+                @include max_1200 {
+                    width: 15px;
+                }
+                @include max_576 {
+                    width: 17px;
+                }
+            }
+        }
+        .policy {
+            width: 100%;
+            @include max_768 {
+                width: auto;
+            }
+            @include max_definite_width(500) {
+                width: 100%;
+            }
+            a {
+                color: #b2b2b2;
+                font-family: Roboto;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                @include max_1200 {
+                    font-size: 16px;
+                }
+            }
+        }
+        .map {
+            width: 342px;
+            @include max_1200 {
+                width: 195px;
+            }
+            @include max_768 {
+                width: 100%;
+            }
+            a {
+                color: #7a3104;
+                font-family: Roboto;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                margin-bottom: 5px;
+                @include max_1200 {
+                    font-size: 16px;
+                }
+                @include max_576 {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .line {
+        background-color: #7a3104;
     }
 }

@@ -709,7 +709,7 @@
 </section>
 <section class="contacts" id="contacts">
     <div class="container text-center">
-        <h2 class="mb-5">Если у вас остались<br> вопросы, свяжитесь с нами.</h2>
+        <h2 class="mb-5">Если у вас остались<br class="d-none d-sm-block"> вопросы, свяжитесь с нами.</h2>
         <h2 class="mb-5">+7 999 123 45 67</h2>
         <div class="btn">Забронировать</div>
         <div class="separator d-flex flex-row justify-content-between align-items-center">

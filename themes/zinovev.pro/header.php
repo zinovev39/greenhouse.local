@@ -43,7 +43,7 @@
                 <div class="btn">Забронировать</div>
             </div>
             <div class="d-flex d-md-none align-items-center">
-                <button class="header-burger d-block d-md-none align-items-center" id="burger-menu">
+                <button class="mobile-menu d-block align-items-center" id="mobile-menu">
                     <span></span>
                     <span></span>
                     <span></span>

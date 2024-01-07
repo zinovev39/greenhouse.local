@@ -36,3 +36,10 @@
         @content;
     }
 }
+
+/* Устройства до <СВОЁ_ЗНАЧЕНИЕ> */
+@mixin max_definite_width($width) {
+    @media screen and (max-width: $width + "px") {
+        @content;
+    }
+}
