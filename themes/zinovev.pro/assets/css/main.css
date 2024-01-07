@@ -39,6 +39,10 @@ body {
   margin: 0;
   padding: 0;
 }
+html._lock,
+body._lock {
+  overflow: hidden;
+}
 
 body {
   font-family: Roboto;
@@ -292,8 +296,7 @@ p {
   .header .container .header-menu {
     position: absolute;
     align-items: start;
-    overflow-y: auto;
-    right: -350px;
+    left: -350px;
     top: 0;
     width: 350px;
     height: 100vh;
@@ -332,7 +335,7 @@ p {
 @media screen and (max-width: 767.98px) {
   .header .container.active .header-menu {
     padding: 75px 30px 0 30px;
-    transform: translateX(-100%);
+    transform: translateX(100%);
   }
   .header .container.active .mobile-menu span:nth-child(1) {
     transform: translateY(0) rotate(45deg);
@@ -1149,6 +1152,11 @@ p {
 }
 .footer .container .menu ul li {
   margin-bottom: 15px;
+}
+@media screen and (max-width: 575.98px) {
+  .footer .container .menu ul li {
+    margin-bottom: 12px;
+  }
 }
 .footer .container .menu ul li:last-child {
   margin-bottom: 0;

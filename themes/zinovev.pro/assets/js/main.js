@@ -1,23 +1,38 @@
 //Меню - Бургер
-document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("mobile-menu").addEventListener("click", function () {
-      document.querySelector(".container").classList.toggle("active");
-  });
-});
+const container = document.querySelector(".container");
+const menuMobile = document.querySelector(".mobile-menu");
+const menuHeader = document.querySelector(".header-menu");
 
-document.getElementById("main-menu").addEventListener("click", (event) => {
-  event._isClickWithInMenu = true;
-});
+const body = document.body;
 
-document.getElementById("mobile-menu").addEventListener("click", (event) => {
-  event._isClickWithInMenu = true;
-});
+if (container && menuMobile) {
+        menuMobile.addEventListener("click", () => {
+            container.classList.toggle("active");
+        });
 
-document.body.addEventListener("click", (event) => {
-  if (event._isClickWithInMenu) return;
-  //Действие при клике
-  document.querySelector(".container").classList.remove("active");
-});
+    menuHeader.querySelectorAll(".menu-item").forEach((link) => {
+        link.addEventListener("click", () => {
+            container.classList.remove("active");
+        });
+    });
+}
+
+//Плавный скролл
+const anchors = document.querySelectorAll('a[href*="#"')
+
+anchors.forEach(anchor => {
+  anchor.addEventListener('click', event => {
+    event.preventDefault();
+
+    const blockID = anchor.getAttribute('href').substring(1);
+
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block:'start'
+    })
+  })
+})
+
 
 // Сладер - Баннер
 var swiperBanner = new Swiper(".swiper-banner", {

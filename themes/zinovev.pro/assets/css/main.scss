@@ -19,6 +19,9 @@ html,
 body {
     margin: 0;
     padding: 0;
+    &._lock {
+        overflow: hidden;
+    }
 }
 
 body {
@@ -248,8 +251,7 @@ p {
             @include max_768 {
                 position: absolute;
                 align-items: start;
-                overflow-y: auto;
-                right: -350px;
+                left: -350px;
                 top: 0;
                 width: 350px;
                 height: 100vh;
@@ -291,7 +293,7 @@ p {
             @include max_768 {
                 .header-menu {
                     padding: 75px 30px 0 30px;
-                    transform: translateX(-100%);
+                    transform: translateX(100%);
                 }
                 .mobile-menu {
                     span {
@@ -985,7 +987,9 @@ p {
                 margin: 0;
                 li {
                     margin-bottom: 15px;
-
+                    @include max_576 {
+                        margin-bottom: 12px;
+                    }
                     &:last-child {
                         margin-bottom: 0;
                     }

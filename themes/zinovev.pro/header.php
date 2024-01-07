@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="header-menu d-flex flex-column flex-md-row align-items-md-center mb-0">
-                <nav id="main-menu">
+                <nav class="menu-body" id="main-menu">
                     <?php
                     wp_nav_menu(array(
                         'theme_location' => 'header-menu',
