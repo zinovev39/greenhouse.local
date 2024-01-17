@@ -83,4 +83,4 @@ $rocket_cache_ignored_parameters = array(
 );
 $rocket_cache_mandatory_cookies = '';
 $rocket_cache_dynamic_cookies = array();
-$rocket_permalink_structure = '/%year%/%monthnum%/%day%/%postname%/';
+$rocket_permalink_structure = '/%postname%/';

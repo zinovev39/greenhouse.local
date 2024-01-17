@@ -2,7 +2,7 @@
 
 <div class="footer">
     <div class="container d-flex flex-column">
-        <div class="content d-flex flex-row flex-wrap justify-content-between justify-content-sm-around justify-md-content-between mb-3">
+        <div class="content d-flex flex-row flex-wrap justify-content-between justify-content-sm-around justify-content-md-between mb-3">
             <div class="about d-flex flex-column">
                 <div class="footer-logo d-flex justify-content-center justify-content-md-start mb-3">
                     <div id="logo">

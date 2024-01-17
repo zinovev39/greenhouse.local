@@ -6,10 +6,15 @@ const menuHeader = document.querySelector(".header-menu");
 const body = document.body;
 
 if (container && menuMobile) {
-        menuMobile.addEventListener("click", () => {
-            container.classList.toggle("active");
-        });
-
+    menuMobile.addEventListener("click", (event) => {
+        container.classList.toggle("active");
+        body.classList.toggle("lock");
+    });
+    menuHeader.addEventListener("click", (event) => {
+        if (event.target.classList.contains("mobile-menu")) {
+            container.classList.remove("active");
+        }
+    });
     menuHeader.querySelectorAll(".menu-item").forEach((link) => {
         link.addEventListener("click", () => {
             container.classList.remove("active");
@@ -18,21 +23,20 @@ if (container && menuMobile) {
 }
 
 //Плавный скролл
-const anchors = document.querySelectorAll('a[href*="#"')
+const anchors = document.querySelectorAll('a[href*="#"');
 
-anchors.forEach(anchor => {
-  anchor.addEventListener('click', event => {
-    event.preventDefault();
+anchors.forEach((anchor) => {
+    anchor.addEventListener("click", (event) => {
+        event.preventDefault();
 
-    const blockID = anchor.getAttribute('href').substring(1);
+        const blockID = anchor.getAttribute("href").substring(1);
 
-    document.getElementById(blockID).scrollIntoView({
-      behavior: 'smooth',
-      block:'start'
-    })
-  })
-})
-
+        document.getElementById(blockID).scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
+    });
+});
 
 // Сладер - Баннер
 var swiperBanner = new Swiper(".swiper-banner", {
