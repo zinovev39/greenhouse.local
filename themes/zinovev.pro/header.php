@@ -8,13 +8,12 @@
 
     <link rel="shortcut icon" href="favicon.png">
     <title><?php the_title(); ?></title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700, 800,900&display=swap&subset=cyrillic" rel="preload stylesheet">
     <?php wp_head(); ?> <!-- Вызывает do_action - запускает хук wp-head -->
 </head>
 <!-- Добавляет класс inner к тегу body, если страница внутренняя
 <?php
 $body_class = '';
-if (!is_front_page()) { //проверяет, является ли страница не главной
+if (!is_front_page()) { //Проверяет, является ли страница не главной
     $body_class = 'inner';
 }
 ?>
@@ -25,7 +24,7 @@ if (!is_front_page()) { //проверяет, является ли страни
         <div class="container d-flex flex-row justify-content-between py-3"> 
             <div class="header-logo">
                 <div id="logo">
-                    <?php the_custom_logo(); ?> <!-- Вызвали логотип -->
+                    <?php the_custom_logo(); ?> <!-- Вызываем логотип -->
                     <p class="mb-0">green house</p>
                 </div>
             </div>

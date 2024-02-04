@@ -1,9 +1,9 @@
-<?php 
+<?php
 
 /*
 Template name: Шаблон для главной страницы
 */
-    get_header();
+get_header();
 ?>
 
 
