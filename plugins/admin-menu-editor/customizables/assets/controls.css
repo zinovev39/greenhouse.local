@@ -209,7 +209,8 @@
 .ame-rg-has-nested-controls {
   display: grid;
   grid-template-columns: repeat(2, minmax(auto, max-content));
-  column-gap: 1.2307692308em;
+  -moz-column-gap: 1.2307692308em;
+       column-gap: 1.2307692308em;
   row-gap: 0.6153846154em;
   align-items: center;
 }
@@ -248,6 +249,4 @@
 }
 .ame-ac-control .ame-rg-with-color-pickers .ame-rg-nested-control .wp-picker-container {
   min-width: unset;
-}
-
-/*# sourceMappingURL=controls.css.map */
+}/*# sourceMappingURL=controls.css.map */

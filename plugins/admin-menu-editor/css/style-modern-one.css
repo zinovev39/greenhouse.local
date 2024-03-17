@@ -6,8 +6,6 @@ $hiddenItemBorder: #f1acb1;
 .ws_container {
   border: 0 solid transparent;
   background: #fafafa;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 304px;
   padding: 0;
@@ -36,8 +34,6 @@ $hiddenItemBorder: #f1acb1;
   padding: 7px;
   border: 1px solid #dfdfdf;
   border-top-width: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
 }
 
@@ -71,8 +67,6 @@ a.ws_edit_link:hover {
 .ws_menu_separator .ws_item_head::after {
   content: "";
   display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   vertical-align: middle;
   width: 249.28px;
@@ -117,8 +111,6 @@ a.ws_edit_link:hover {
 .ws_compact_layout .ws_container {
   margin-top: -1px;
   margin-bottom: 0;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   box-shadow: none;
 }
 .ws_compact_layout .ws_container .ws_item_head {
@@ -215,6 +207,4 @@ a.ws_edit_link:hover {
   line-height: 36px;
   padding: 0 36px 0 8px;
   display: block;
-}
-
-/*# sourceMappingURL=style-modern-one.css.map */
+}/*# sourceMappingURL=style-modern-one.css.map */

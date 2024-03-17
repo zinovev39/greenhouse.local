@@ -36,8 +36,6 @@
 
 .ame-form-box-group-content {
   display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -54,6 +52,4 @@
 .ame-form-box-sidebar-column {
   width: 300px;
   float: left;
-}
-
-/*# sourceMappingURL=form-box.css.map */
+}/*# sourceMappingURL=form-box.css.map */

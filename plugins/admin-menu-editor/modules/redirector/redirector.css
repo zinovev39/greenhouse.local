@@ -100,7 +100,7 @@
 }
 
 .ame-rui-drag-icon {
-  fill: #1e1e1e;
+  fill: rgb(30, 30, 30);
 }
 
 #ame-rui-menu-items {
@@ -377,7 +377,6 @@
   .ame-rui-actor {
     min-width: 12em;
   }
-
   .ame-rui-actions button .dashicons {
     display: none;
   }
@@ -386,7 +385,6 @@
   .ame-rui-actor {
     min-width: 10em;
   }
-
   .ame-rui-shortcodes-enabled .ame-rui-button-label, .ame-rui-actions .ame-rui-button-label {
     display: none;
   }
@@ -395,7 +393,6 @@
   .ame-rui-actor {
     line-height: 38px;
   }
-
   .ame-rui-redirect .ame-rui-actions button {
     margin-bottom: 0;
   }
@@ -403,7 +400,6 @@
     line-height: 38px;
     vertical-align: top;
   }
-
   .ame-rui-shortcodes-enabled {
     line-height: 38px;
   }
@@ -411,6 +407,4 @@
     vertical-align: top;
     line-height: 38px;
   }
-}
-
-/*# sourceMappingURL=redirector.css.map */
+}/*# sourceMappingURL=redirector.css.map */
